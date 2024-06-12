@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro/components/cronometro.dart';
 import 'package:pomodoro/components/entrada_tempo.dart';
 
 class Pomodoro extends StatelessWidget {
@@ -9,14 +10,18 @@ class Pomodoro extends StatelessWidget {
     return const SafeArea(
       child: Scaffold(
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text("Pododoro"),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                EntradaTempo(titulo: "Trabalho", valor: 25),
-                EntradaTempo(titulo: "Descanso  ", valor: 5),
-              ],
+            Expanded(child: Cronometro()),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  EntradaTempo(titulo: "Trabalho", valor: 25),
+                  EntradaTempo(titulo: "Descanso  ", valor: 5),
+                ],
+              ),
             )
           ],
         ),
