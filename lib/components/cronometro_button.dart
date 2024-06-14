@@ -23,7 +23,7 @@ class CronometroButton extends StatelessWidget {
           ),
           textStyle: const TextStyle(fontSize: 25),
         ),
-        onPressed: () {},
+        onPressed: click,
         child: Row(
           children: [
             Padding(
